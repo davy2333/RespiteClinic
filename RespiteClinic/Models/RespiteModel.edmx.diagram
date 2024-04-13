@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b42fdb3df9894669b4383eb7e1a67fd2" Name="Diagram1" ZoomLevel="59">
+        <EntityTypeShape EntityType="RespiteClinicModel.citas" Width="1.5" PointX="6.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RespiteClinicModel.citas_inventario" Width="1.5" PointX="5.375" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="RespiteClinicModel.departamento" Width="1.5" PointX="8.875" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RespiteClinicModel.historial_clinico" Width="1.5" PointX="6.25" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RespiteClinicModel.horario_laboral" Width="1.5" PointX="10" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="RespiteClinicModel.inventario_medico" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="RespiteClinicModel.pacientes" Width="1.5" PointX="4" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RespiteClinicModel.pagos" Width="1.5" PointX="7.5" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="RespiteClinicModel.personal" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RespiteClinicModel.sysdiagrams" Width="1.5" PointX="9.5" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="RespiteClinicModel.fk_citas" ManuallyRouted="false" />
+        <AssociationConnector Association="RespiteClinicModel.fk_historial_clinico" ManuallyRouted="false" />
+        <AssociationConnector Association="RespiteClinicModel.fk_personal" ManuallyRouted="false" />
+        <AssociationConnector Association="RespiteClinicModel.fk_inventario" ManuallyRouted="false" ></AssociationConnector>
+        <AssociationConnector Association="RespiteClinicModel.fk_pacientesDep" ManuallyRouted="false" />
+        <AssociationConnector Association="RespiteClinicModel.fk_personalDep" ManuallyRouted="false" />
+        <AssociationConnector Association="RespiteClinicModel.fk_pacientes" ManuallyRouted="false" />
+        <AssociationConnector Association="RespiteClinicModel.fk_personalHor" ManuallyRouted="false" />
+        <AssociationConnector Association="RespiteClinicModel.fk_personalPag" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="RespiteClinicModel.C__MigrationHistory" Width="1.5" PointX="2" PointY="0.5" />
+        <EntityTypeShape EntityType="RespiteClinicModel.AspNetRoles" Width="1.5" PointX="11.375" PointY="2.5" />
+        <EntityTypeShape EntityType="RespiteClinicModel.AspNetUserClaims" Width="1.5" PointX="15.875" PointY="3.625" />
+        <EntityTypeShape EntityType="RespiteClinicModel.AspNetUserLogins" Width="1.5" PointX="15.875" PointY="1" />
+        <EntityTypeShape EntityType="RespiteClinicModel.AspNetUsers" Width="1.5" PointX="13.625" PointY="1.375" />
+        <AssociationConnector Association="RespiteClinicModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="RespiteClinicModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="RespiteClinicModel.AspNetUserRoles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
