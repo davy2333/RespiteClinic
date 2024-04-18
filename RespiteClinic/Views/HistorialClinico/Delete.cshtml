@@ -1,0 +1,68 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+@model RespiteClinic.Models.DTO.Historial_clinico
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Historial_clinico</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_paciente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_paciente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.historial_enfermedades)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.historial_enfermedades)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.motivo_consulta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motivo_consulta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.diagnostico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.diagnostico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tratamiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tratamiento)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

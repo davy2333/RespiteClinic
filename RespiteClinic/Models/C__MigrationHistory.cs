@@ -12,15 +12,11 @@ namespace RespiteClinic.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class departamento
+    public partial class C__MigrationHistory
     {
-        public int id { get; set; }
-        public Nullable<int> id_personal { get; set; }
-        public Nullable<int> id_paciente { get; set; }
-        public string nombre_departamento { get; set; }
-        public string descripcion { get; set; }
-    
-        public virtual pacientes pacientes { get; set; }
-        public virtual personal personal { get; set; }
+        public string MigrationId { get; set; }
+        public string ContextKey { get; set; }
+        public byte[] Model { get; set; }
+        public string ProductVersion { get; set; }
     }
 }

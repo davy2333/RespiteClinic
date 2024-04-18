@@ -12,15 +12,13 @@ namespace RespiteClinic.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class departamento
+    public partial class AspNetUserClaims
     {
-        public int id { get; set; }
-        public Nullable<int> id_personal { get; set; }
-        public Nullable<int> id_paciente { get; set; }
-        public string nombre_departamento { get; set; }
-        public string descripcion { get; set; }
+        public int Id { get; set; }
+        public string UserId { get; set; }
+        public string ClaimType { get; set; }
+        public string ClaimValue { get; set; }
     
-        public virtual pacientes pacientes { get; set; }
-        public virtual personal personal { get; set; }
+        public virtual AspNetUsers AspNetUsers { get; set; }
     }
 }

@@ -1,0 +1,53 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+@model RespiteClinic.Models.DTO.Departamento
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Departamento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_personal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_personal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_paciente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_paciente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_departamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_departamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

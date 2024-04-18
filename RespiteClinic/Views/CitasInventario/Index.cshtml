@@ -1,0 +1,49 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+@model IEnumerable<RespiteClinic.Models.DTO.Citas_inventario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id_citas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_inventario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cantidad_utilizada)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id_citas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.id_inventario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cantidad_utilizada)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -11,27 +11,19 @@ namespace RespiteClinic.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
-    public partial class citas
+    
+    public partial class AspNetRoles
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public citas()
+        public AspNetRoles()
         {
-            this.citas_inventario = new HashSet<citas_inventario>();
+            this.AspNetUsers = new HashSet<AspNetUsers>();
         }
-
-        public int id { get; set; }
-        public Nullable<int> id_personal { get; set; }
-        public Nullable<int> id_historial_clinico { get; set; }
-        public string estado { get; set; }
-        public byte[] fecha_hora { get; set; }
+    
+        public string Id { get; set; }
+        public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<citas_inventario> citas_inventario { get; set; }
-        public virtual historial_clinico historial_clinico { get; set; }
-        public virtual personal personal { get; set; }
-
-
+        public virtual ICollection<AspNetUsers> AspNetUsers { get; set; }
     }
 }

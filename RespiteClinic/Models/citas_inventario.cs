@@ -11,17 +11,12 @@ namespace RespiteClinic.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class citas_inventario
     {
-        [Display(Name="#")]
         public int id { get; set; }
-        [Display(Name = "#")]
         public Nullable<int> id_citas { get; set; }
-        [Display(Name = "#")]
         public Nullable<int> id_inventario { get; set; }
-        [Display(Name = "cantidad de medicina utilizada")]
         public Nullable<int> cantidad_utilizada { get; set; }
     
         public virtual citas citas { get; set; }

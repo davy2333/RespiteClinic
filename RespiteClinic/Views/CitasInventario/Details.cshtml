@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+@model RespiteClinic.Models.DTO.Citas_inventario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Citas_inventario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_citas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_citas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_inventario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_inventario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad_utilizada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad_utilizada)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

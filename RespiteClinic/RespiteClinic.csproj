@@ -171,21 +171,55 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Citas\CitasController.cs" />
+    <Compile Include="Controllers\Citas_Inventario\CitasInventarioController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\Departamento\DepartamentoController.cs" />
+    <Compile Include="Controllers\Historial_Clinico\HistorialClinicoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Horario_Laborlal\HorarioLaboralController.cs" />
+    <Compile Include="Controllers\Inventario_Medico\InventarioMedicoController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\Pacientes\PacientesController.cs" />
+    <Compile Include="Controllers\Pagos\PagosController.cs" />
+    <Compile Include="Controllers\Personal\PersonalController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AspNetRoles.cs">
+      <DependentUpon>RespiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaims.cs">
+      <DependentUpon>RespiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogins.cs">
+      <DependentUpon>RespiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUsers.cs">
+      <DependentUpon>RespiteModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\citas.cs">
       <DependentUpon>RespiteModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\citas_inventario.cs">
       <DependentUpon>RespiteModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\C__MigrationHistory.cs">
+      <DependentUpon>RespiteModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\departamento.cs">
       <DependentUpon>RespiteModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DTO\Citas.cs" />
+    <Compile Include="Models\DTO\Citas_inventario.cs" />
+    <Compile Include="Models\DTO\Departamento.cs" />
+    <Compile Include="Models\DTO\Historial_clinico.cs" />
+    <Compile Include="Models\DTO\Horario_laboral.cs" />
+    <Compile Include="Models\DTO\Inventario_medico.cs" />
+    <Compile Include="Models\DTO\Pacientes.cs" />
+    <Compile Include="Models\DTO\Pagos.cs" />
+    <Compile Include="Models\DTO\Personal.cs" />
     <Compile Include="Models\historial_clinico.cs">
       <DependentUpon>RespiteModel.tt</DependentUpon>
     </Compile>
@@ -269,6 +303,7 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="wwwroot\images\unnamed.jpg" />
     <EntityDeploy Include="Models\RespiteModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>RespiteModel.Designer.cs</LastGenOutput>
@@ -321,6 +356,53 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Citas\Index.cshtml" />
+    <Content Include="Views\CitasInventario\Index.cshtml" />
+    <Content Include="Views\Departamento\Index.cshtml" />
+    <Content Include="Views\HistorialClinico\Index.cshtml" />
+    <Content Include="Views\HorarioLaboral\Index.cshtml" />
+    <Content Include="Views\InventarioMedico\Index.cshtml" />
+    <Content Include="Views\Pacientes\Index.cshtml" />
+    <Content Include="Views\Pagos\Index.cshtml" />
+    <Content Include="Views\Personal\Index.cshtml" />
+    <Content Include="Views\Citas\Details.cshtml" />
+    <Content Include="Views\Citas\Create.cshtml" />
+    <Content Include="Views\Citas\Edit.cshtml" />
+    <Content Include="Views\Citas\Delete.cshtml" />
+    <Content Include="Views\CitasInventario\Details.cshtml" />
+    <Content Include="Views\CitasInventario\Create.cshtml" />
+    <Content Include="Views\CitasInventario\Edit.cshtml" />
+    <Content Include="Views\CitasInventario\Delete.cshtml" />
+    <Content Include="Views\Departamento\Details.cshtml" />
+    <Content Include="Views\Departamento\Create.cshtml" />
+    <Content Include="Views\Departamento\Edit.cshtml" />
+    <Content Include="Views\Departamento\Delete.cshtml" />
+    <Content Include="Views\HistorialClinico\Details.cshtml" />
+    <Content Include="Views\HorarioLaboral\Details.cshtml" />
+    <Content Include="Views\HorarioLaboral\Create.cshtml" />
+    <Content Include="Views\InventarioMedico\Create.cshtml" />
+    <Content Include="Views\InventarioMedico\Details.cshtml" />
+    <Content Include="Views\Pacientes\Details.cshtml" />
+    <Content Include="Views\Pacientes\Create.cshtml" />
+    <Content Include="Views\Pagos\Create.cshtml" />
+    <Content Include="Views\Pagos\Details.cshtml" />
+    <Content Include="Views\Personal\Details.cshtml" />
+    <Content Include="Views\Personal\Create.cshtml" />
+    <Content Include="Views\HistorialClinico\Create.cshtml" />
+    <Content Include="Views\HistorialClinico\Edit.cshtml" />
+    <Content Include="Views\HistorialClinico\Delete.cshtml" />
+    <Content Include="Views\HorarioLaboral\Edit.cshtml" />
+    <Content Include="Views\HorarioLaboral\Delete.cshtml" />
+    <Content Include="Views\InventarioMedico\Edit.cshtml" />
+    <Content Include="Views\InventarioMedico\Delete.cshtml" />
+    <Content Include="Views\Pacientes\Edit.cshtml" />
+    <Content Include="Views\Pacientes\Delete.cshtml" />
+    <Content Include="Views\Pagos\Edit.cshtml" />
+    <Content Include="Views\Pagos\Delete.cshtml" />
+    <Content Include="Views\Personal\Delete.cshtml" />
+    <Content Include="Views\Personal\Edit.cshtml" />
+    <Content Include="Views\Shared\_LayoutDashboard.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

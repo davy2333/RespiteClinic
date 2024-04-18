@@ -20,20 +20,28 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark" style="background-color: #114c5f;">
+
         <div class="container">
-            @Html.ActionLink("RESPITECLINIC", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            
+            @Html.ActionLink("Dashboard", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Alternar navegación" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Inicio", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Acerca de", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
+
+            <ul class="navbar-nav flex-grow-1">
+                <li>@Html.ActionLink("Citas", "Index", "Citas", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("p. usado en citas", "Index", "CitasInventario", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("departamento", "Index", "Departamento", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Historial Clinico", "Index", "HistorialClinico", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Horario Laboral", "Index", "HorarioLaboral", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Inventario", "Index", "InventarioMedico", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Pacientes", "Index", "Pacientes", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("pagos", "Index", "Pagos", new { area = "" }, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Personal", "Index", "Personal", new { area = "" }, new { @class = "nav-link" })</li>
+            </ul>
+
+
         </div>
     </nav>
     <div class="container body-content">
