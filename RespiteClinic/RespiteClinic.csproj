@@ -303,7 +303,15 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="wwwroot\images\unnamed.jpg" />
+    <Content Include="Views\Home\images\6.png" />
+    <Content Include="wwwroot\images\1713594156080.png" />
+    <Content Include="wwwroot\images\47865036-enfermero.jpg" />
+    <Content Include="wwwroot\images\6.png" />
+    <Content Include="Views\Home\images\eneferos2.jpg" />
+    <Content Include="wwwroot\images\enfermeras-jpg-62b442a868204-1024x683.jpg" />
+    <Content Include="wwwroot\images\enfermeros.jpg" />
+    <Content Include="wwwroot\images\enfermeros2.jpg" />
+    <Content Include="wwwroot\images\images.jpg" />
     <EntityDeploy Include="Models\RespiteModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>RespiteModel.Designer.cs</LastGenOutput>
@@ -403,6 +411,9 @@
     <Content Include="Views\Personal\Edit.cshtml" />
     <Content Include="Views\Shared\_LayoutDashboard.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Dashboard\Profile.cshtml" />
+    <Content Include="Views\Dashboard\Tables.cshtml" />
+    <Content Include="Views\Shared\layoutUsuario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

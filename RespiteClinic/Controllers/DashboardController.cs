@@ -13,5 +13,19 @@ namespace RespiteClinic.Controllers
         {
             return View();
         }
+
+        public new ActionResult Profile()
+        {
+            ViewBag.Message = "Sample page for Profile.";
+
+            return View();
+        }
+
+        public ActionResult Tables()
+        {
+            ViewBag.Message = "Sample page for Tables.";
+
+            return View();
+        }
     }
 }

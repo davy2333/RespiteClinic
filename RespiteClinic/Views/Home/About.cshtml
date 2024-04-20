@@ -1,9 +1,29 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<main aria-labelledby="title">
-    <h2 id="title">@ViewBag.Title.</h2>
-    <h3>@ViewBag.Message</h3>
 
-    <p>Use this area to provide additional information.</p>
+<main aria-labelledby="title" style="display: flex; align-items: center;">
+    <!-- Columna de la imagen -->
+    <div style="flex: 1;">
+        <img src="~/wwwroot/images/6.png" width="560" height="560" style="display: block; margin: 0 auto;" alt="Imagen Hospital">
+    </div>
+    <!-- Columna del texto "About Us" -->
+    <div style="flex: 1; text-align: center;">
+        <h1>RespiteClinic</h1>
+        <p>
+            Bienvenido al sistema de gestión del Mini Hospital.
+            Nuestro sistema está diseñado para facilitar el control y
+            la administración eficiente de todas las actividades relacionadas
+            con la atención médica y la gestión de pacientes en nuestro pequeño hospital.
+
+            Nuestro sistema de gestión del Mini Hospital está diseñado para simplificar y
+            optimizar todas las operaciones hospitalarias, desde la admisión de pacientes
+            hasta la facturación y el seguimiento del rendimiento. Confiamos en que esta
+            herramienta será invaluable para mejorar la eficiencia y la calidad de la
+            atención médica que brindamos a nuestra comunidad.
+
+            ¡Gracias por confiar en RespiteClinic!
+        </p>
+    </div>
 </main>
+

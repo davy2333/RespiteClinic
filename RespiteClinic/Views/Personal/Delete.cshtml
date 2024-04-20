@@ -10,7 +10,7 @@
 <h2>Delete</h2>
 
 <h3>Are you sure you want to delete this?</h3>
-<div>
+<div style="background-color: #9cd2d3; padding: 10px; margin-bottom: 15px; border-radius: 5px;">
     <h4>Personal</h4>
     <hr />
     <dl class="dl-horizontal">
@@ -60,9 +60,9 @@
     {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
+<div class="form-actions no-color">
+    <input type="submit" value="Delete" class="btn btn-default" /> |
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-outline-secondary" })
+</div>
     }
 </div>

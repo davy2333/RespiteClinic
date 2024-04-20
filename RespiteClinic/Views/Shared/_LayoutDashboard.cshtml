@@ -4,52 +4,55 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab">
 
+
     <style>
         body {
             font-family: "Roboto slab", sans-serif;
-            color: #f2e6cf;
         }
     </style>
-
 </head>
-<body>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark" style="background-color: #114c5f;">
 
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #114c5f;">
         <div class="container">
-            
-            @Html.ActionLink("Dashboard", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Alternar navegación" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+            @Html.ActionLink("Dashboard", "Index", "Dashboard", new { area = "" }, new { @class = "navbar-brand" })
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">@Html.ActionLink("Citas", "Index", "Citas", new { area = "" }, new { @class = "nav-link", style = "font-size: 15px;" })</li>
+                    <li class="nav-item">@Html.ActionLink("p. usado en citas", "Index", "CitasInventario", new { area = "" }, new { @class = "nav-link", style = "font-size: 15px;" })</li>
+                    <li class="nav-item">@Html.ActionLink("departamento", "Index", "Departamento", new { area = "" }, new { @class = "nav-link", style = "font-size: 15px;" })</li>
+                    <li class="nav-item">@Html.ActionLink("Historial Clinico", "Index", "HistorialClinico", new { area = "" }, new { @class = "nav-link", style = "font-size: 15px;" })</li>
+                    <li class="nav-item">@Html.ActionLink("Horario Laboral", "Index", "HorarioLaboral", new { area = "" }, new { @class = "nav-link", style = "font-size: 15px;" })</li>
+                    <li class="nav-item">@Html.ActionLink("Inventario", "Index", "InventarioMedico", new { area = "" }, new { @class = "nav-link", style = "font-size: 15px;" })</li>
+                    <li class="nav-item">@Html.ActionLink("Pacientes", "Index", "Pacientes", new { area = "" }, new { @class = "nav-link", style = "font-size: 15px;" })</li>
+                    <li class="nav-item">@Html.ActionLink("pagos", "Index", "Pagos", new { area = "" }, new { @class = "nav-link", style = "font-size: 15px;" })</li>
+                    <li class="nav-item">@Html.ActionLink("Personal", "Index", "Personal", new { area = "" }, new { @class = "nav-link", style = "font-size: 15px;" })</li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    
 
-            <ul class="navbar-nav flex-grow-1">
-                <li>@Html.ActionLink("Citas", "Index", "Citas", new { area = "" }, new { @class = "nav-link" })</li>
-                <li>@Html.ActionLink("p. usado en citas", "Index", "CitasInventario", new { area = "" }, new { @class = "nav-link" })</li>
-                <li>@Html.ActionLink("departamento", "Index", "Departamento", new { area = "" }, new { @class = "nav-link" })</li>
-                <li>@Html.ActionLink("Historial Clinico", "Index", "HistorialClinico", new { area = "" }, new { @class = "nav-link" })</li>
-                <li>@Html.ActionLink("Horario Laboral", "Index", "HorarioLaboral", new { area = "" }, new { @class = "nav-link" })</li>
-                <li>@Html.ActionLink("Inventario", "Index", "InventarioMedico", new { area = "" }, new { @class = "nav-link" })</li>
-                <li>@Html.ActionLink("Pacientes", "Index", "Pacientes", new { area = "" }, new { @class = "nav-link" })</li>
-                <li>@Html.ActionLink("pagos", "Index", "Pagos", new { area = "" }, new { @class = "nav-link" })</li>
-                <li>@Html.ActionLink("Personal", "Index", "Personal", new { area = "" }, new { @class = "nav-link" })</li>
-            </ul>
 
-
+                    <li class="nav-item">@Html.Partial("_LoginPartial")</li>
+                </ul>
+            </div>
         </div>
     </nav>
+
+
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - UNICAES</p>
-        </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

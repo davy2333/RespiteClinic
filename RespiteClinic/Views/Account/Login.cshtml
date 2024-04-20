@@ -1,64 +1,74 @@
 ﻿@using RespiteClinic.Models
 @model LoginViewModel
-@{
-    ViewBag.Title = "Iniciar sesion";
-}
 
-<main aria-labelledby="title">
-    <h2 id="title">@ViewBag.Title.</h2>
-    <div class="row">
-        <div class="col-md-8">
-            <section id="loginForm">
-                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
-                {
-                    @Html.AntiForgeryToken()
-                    <h4>Utilice una cuenta local para iniciar sesión.</h4>
-                    <hr />
-                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                    <div class="row">
-                        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 col-form-label" })
-                        <div class="col-md-10">
-                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-                    <div class="row">
-                        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 col-form-label" })
-                        <div class="col-md-10">
-                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="offset-md-2 col-md-10">
-                            <div class="checkbox">
-                                @Html.CheckBoxFor(m => m.RememberMe)
-                                @Html.LabelFor(m => m.RememberMe)
+<style>
+    .container-fluid {
+        background-color: #9cd2d3;
+        padding: 20px;
+        border-radius: 10px;
+
+    }
+</style>
+<style>
+    body {
+        background-color: #fff;
+    }
+</style>
+
+
+
+<div >
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <img src="~/wwwroot/images/enfermeros2.jpg" width="100" height="100" style="display: block; margin: 0 auto;">
+
+            <div class="container-fluid">
+                <main aria-labelledby="title">
+                    <h2 id="title">Iniciar sesión.</h2>
+                    <section id="loginForm">
+                        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <h4>Utilice una cuenta local para iniciar sesión.</h4>
+                            <hr />
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group row">
+                                @Html.LabelFor(m => m.Email, new { @class = "col-md-2 col-form-label" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="offset-md-2 col-md-10">
-                            <input type="submit" value="Iniciar sesión" class="btn btn-outline-dark" />
-                        </div>
-                    </div>
-                    <p>
-                        @Html.ActionLink("Registrarse como usuario nuevo", "Register")
-                    </p>
-                    
-                        <p>
-                            @Html.ActionLink("¿Ha olvidado su contraseña?", "ForgotPassword")
-                        </p>
-                }
-            </section>
-        </div>
-        <div class="col-md-4">
-            <section id="socialLoginForm">
-                @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
-            </section>
+                            <div class="form-group row">
+                                @Html.LabelFor(m => m.Password, new { @class = "col-md-2 col-form-label" })
+                                <div class="col-md-10">
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="offset-md-2 col-md-10">
+                                    <div class="checkbox">
+                                        @Html.CheckBoxFor(m => m.RememberMe)
+                                        @Html.LabelFor(m => m.RememberMe)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="offset-md-2 col-md-10">
+                                    <input type="submit" value="Iniciar sesión" class="btn btn-outline-dark" />
+                                </div>
+                            </div>
+                            <p>
+                                @Html.ActionLink("Registrarse como usuario nuevo", "Register")
+                            </p>
+                        }
+                    </section>
+                </main>
+            </div>
         </div>
     </div>
-</main>
+</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

@@ -448,7 +448,7 @@
           <Property Name="id_personal" Type="Int32" />
           <Property Name="id_historial_clinico" Type="Int32" />
           <Property Name="estado" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="fecha_hora" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="fecha_hora" Type="Binary" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
           <NavigationProperty Name="citas_inventario" Relationship="Self.fk_citas" FromRole="citas" ToRole="citas_inventario" />
           <NavigationProperty Name="historial_clinico" Relationship="Self.fk_historial_clinico" FromRole="citas" ToRole="historial_clinico" />
           <NavigationProperty Name="personal" Relationship="Self.fk_personal" FromRole="citas" ToRole="personal" />
@@ -482,7 +482,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_paciente" Type="Int32" />
-          <Property Name="fecha_registro_historial" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="fecha_registro_historial" Type="Binary" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
           <Property Name="historial_enfermedades" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="motivo_consulta" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="diagnostico" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />

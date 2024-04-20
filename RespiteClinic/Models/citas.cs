@@ -11,8 +11,7 @@ namespace RespiteClinic.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class citas
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,7 +19,7 @@ namespace RespiteClinic.Models
         {
             this.citas_inventario = new HashSet<citas_inventario>();
         }
-
+    
         public int id { get; set; }
         public Nullable<int> id_personal { get; set; }
         public Nullable<int> id_historial_clinico { get; set; }
@@ -31,7 +30,5 @@ namespace RespiteClinic.Models
         public virtual ICollection<citas_inventario> citas_inventario { get; set; }
         public virtual historial_clinico historial_clinico { get; set; }
         public virtual personal personal { get; set; }
-
-
     }
 }

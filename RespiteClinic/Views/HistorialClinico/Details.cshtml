@@ -9,7 +9,7 @@
 
 <h2>Details</h2>
 
-<div>
+<div style="background-color: #9cd2d3; padding: 10px; margin-bottom: 15px; border-radius: 5px;">
     <h4>Historial_clinico</h4>
     <hr />
     <dl class="dl-horizontal">
@@ -57,5 +57,5 @@
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-outline-secondary" })
 </p>

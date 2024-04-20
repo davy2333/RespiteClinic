@@ -16,7 +16,7 @@ namespace RespiteClinic.Models.DTO
         public string descripcion { get; set; }
         [Display(Name = "stock disponible")]
         public string stock { get; set; }
-        [Display(Name = "cantidad minima disponible")]
+        [Display(Name = "cantidad minima requerida")]
         public string MOQ { get; set; }
         [Display(Name = "precio asignado")]
         public Nullable<decimal> precio { get; set; }
